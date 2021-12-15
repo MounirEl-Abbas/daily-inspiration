@@ -1,0 +1,16 @@
+nav {
+  background-color: $nav-color;
+  position: relative;
+  height: 120px;
+
+  img {
+    position: absolute;
+    width: 250px;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 0 50px 10px 40px;
+    mix-blend-mode: luminosity;
+  }
+}
