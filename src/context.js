@@ -18,25 +18,25 @@ const AppProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    // const pictureWidth = window.innerWidth;
-    // Promise.all([
-    //   fetch(`https://picsum.photos/${pictureWidth}/400`),
-    //   fetch(`https://picsum.photos/${pictureWidth}/900`),
-    //   fetch(`https://quote-garden.herokuapp.com/api/v3/quotes/random`),
-    //   fetch("https://stoicquotesapi.com/v1/api/quotes/random"),
-    //   fetch(`https://api.adviceslip.com/advice`),
-    //   fetch(`https://www.boredapi.com/api/activity`),
-    //   fetch(`https://random-words-api.vercel.app/word`),
-    //   fetch(`www.themealdb.com/api/json/v1/1/random.php`),
-    //   fetch(`https://www.thecocktaildb.com/api/json/v1/1/random.php`),
-    // ])
-    //   .then((responses) => Promise.all(responses.map((res) => res.json())))
-    //   .then((data) => {
-    //     console.log(`data`, data);
-    //   })
-    //   .catch((err) => {
-    //     console.log(`err`, err);
-    //   });
+    const pictureWidth = window.innerWidth;
+    Promise.all([
+      fetch(`https://picsum.photos/${pictureWidth}/400`),
+      fetch(`https://picsum.photos/${pictureWidth}/900`),
+      fetch(`https://quote-garden.herokuapp.com/api/v3/quotes/random`),
+      fetch("https://stoicquotesapi.com/v1/api/quotes/random"),
+      fetch(`https://api.adviceslip.com/advice`),
+      fetch(`https://www.boredapi.com/api/activity`),
+      fetch(`https://random-words-api.vercel.app/word`),
+      fetch(`www.themealdb.com/api/json/v1/1/random.php`),
+      fetch(`https://www.thecocktaildb.com/api/json/v1/1/random.php`),
+    ])
+      .then((responses) => Promise.all(responses.map((res) => res.json())))
+      .then((data) => {
+        console.log(`data`, data);
+      })
+      .catch((err) => {
+        console.log(`err`, err);
+      });
   }, []);
 
   return (
