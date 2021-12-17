@@ -5,7 +5,7 @@ import affirmations from "./assets/affirmations";
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -38,7 +38,6 @@ const AppProvider = ({ children }) => {
         arrayOfData.push(picture1, picture2);
         parseData(arrayOfData);
       });
-      setIsLoading(false);
     } catch (error) {
       console.log(`error`, error);
     }
@@ -78,14 +77,47 @@ const AppProvider = ({ children }) => {
       { APIName: "dailyPicture2", data: DATA_Picture2 },
     ];
     setData(newDataArray);
-    console.log(`data`, newDataArray);
+    setIsLoading(false);
+
+    console.log(`context data`, newDataArray);
+  };
+
+  const getRelevantData = (APIName) => {
+    switch (APIName) {
+      case "dailyAffirmation":
+        const result = data.find((APIData) => {
+          return APIData.APIName === APIName;
+        });
+        return result;
+      case "dailyQuote":
+        break;
+      case "dailyStoicQuote":
+        break;
+      case "dailyAdvice":
+        break;
+      case "dailyWord":
+        break;
+      case "dailyActivity":
+        break;
+      case "dailyMeal":
+        break;
+      case "dailyDrink":
+        break;
+      case "dailyPicture1":
+        break;
+      case "dailyPicture2":
+        break;
+
+      default:
+        break;
+    }
   };
 
   return (
     <AppContext.Provider
       value={{
         isLoading,
-        data,
+        getRelevantData,
       }}
     >
       {children}
