@@ -12,13 +12,28 @@ body,
   height: 100%;
 }
 
-nav {
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #efefef;
+}
+
+h3,
+h4 {
+  color: #1e1e1e;
+  font-size: 20px;
+}
+
+p {
+  color: #151515;
+}
+
+header {
   background-color: #0e1d33;
   position: relative;
   height: 120px;
 }
 
-nav img {
+header img {
   position: absolute;
   width: 250px;
   top: 50px;
@@ -78,30 +93,4 @@ nav img {
   width: 40%;
   padding: 10px 20px;
   margin-top: 50px;
-}
-
-.sectionTwo {
-  background: linear-gradient(to bottom, #0e1d33 0%, #ffe4c8 47%, #efefef 100%);
-  height: 1000px;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  background-color: #efefef;
-}
-
-h3,
-h4 {
-  color: #1e1e1e;
-  font-size: 20px;
-}
-
-p {
-  color: #151515;
-}
-
-img:not(nav > img) {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
 }

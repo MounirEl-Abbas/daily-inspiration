@@ -13,6 +13,8 @@ const AppProvider = ({ children }) => {
   }, []);
 
   const fetchData = async () => {
+    setIsLoading(true);
+
     const pictureWidth = window.innerWidth;
     let arrayOfData = [];
     try {
@@ -36,10 +38,10 @@ const AppProvider = ({ children }) => {
         arrayOfData.push(picture1, picture2);
         parseData(arrayOfData);
       });
+      setIsLoading(false);
     } catch (error) {
       console.log(`error`, error);
     }
-    return arrayOfData;
   };
 
   const getAffirmation = () => {
@@ -98,21 +100,8 @@ export const useGlobalContext = () => {
 export default AppProvider;
 
 /* 
-https://www.emailjs.com/
-
-
 https://www.thecocktaildb.com/api.php
-
-
-
-
-
-
 https://github.com/tlcheah2/stoic-quote-lambda-public-api
-
-
-
-
 https://github.com/annthurium/affirmations/blob/master/affirmations.js
 https://www.themealdb.com/api.php
 https://github.com/mcnaveen/Random-Words-API

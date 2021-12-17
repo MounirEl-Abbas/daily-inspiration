@@ -3,9 +3,9 @@ import logo from "../assets/logo.png";
 
 const Navbar = () => {
   return (
-    <nav>
+    <header>
       <img src={logo} alt="M.E Time Logo" />
-    </nav>
+    </header>
   );
 };
 

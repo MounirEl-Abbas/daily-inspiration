@@ -1,36 +1,24 @@
 import React from "react";
-//Styles
 //Components
-import Navbar from "./components/Navbar";
-import ContentSectionOne from "./components/ContentSectionOne";
-import ContentSectionTwo from "./components/ContentSectionTwo";
-import ContentSectionThree from "./components/ContentSectionThree/ContentSectionThree";
-import Form from "./components/Form";
-import Loading from "./components/Loading";
-//Custom Hook -- Context
-import { useGlobalContext } from "./context";
+import Header from "./components/Header";
+import Image from "./components/images/Image";
+import Affirmation from "./components/Affirmation";
+import Quotes from "./components/Quotes";
+import WAA from "./components/wordAdviceActivity/WAA";
+import MealDrink from "./components/MealDrink/MealDrink";
 
-function App() {
-  const { isLoading } = useGlobalContext();
-
-  if (isLoading) {
-    return (
-      <>
-        <Navbar />
-        <Loading />
-      </>
-    );
-  } else {
-    return (
-      <div className="container">
-        <Navbar />
-        {/* <ContentSectionOne />
-        <ContentSectionTwo />
-        <ContentSectionThree />
-        <Form /> */}
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div className="container">
+      <Header />
+      <Image />
+      <Affirmation />
+      <Quotes />
+      <Image />
+      <WAA />
+      <MealDrink />
+    </div>
+  );
+};
 
 export default App;
