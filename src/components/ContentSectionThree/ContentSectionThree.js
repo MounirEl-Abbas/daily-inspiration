@@ -1,14 +1,14 @@
-import React from "react";
-import Cocktail from "./Cocktail";
-import Meal from "./Meal";
+// import React from "react";
+// import Cocktail from "./Cocktail";
+// import Meal from "./Meal";
 
-const ContentSectionThree = () => {
-  return (
-    <div>
-      <Meal />
-      <Cocktail />
-    </div>
-  );
-};
+// const ContentSectionThree = () => {
+//   return (
+//     <div>
+//       <Meal />
+//       <Cocktail />
+//     </div>
+//   );
+// };
 
-export default ContentSectionThree;
+// export default ContentSectionThree;

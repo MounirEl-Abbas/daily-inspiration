@@ -24,10 +24,10 @@ function App() {
     return (
       <div className="container">
         <Navbar />
-        <ContentSectionOne />
+        {/* <ContentSectionOne />
         <ContentSectionTwo />
         <ContentSectionThree />
-        <Form />
+        <Form /> */}
       </div>
     );
   }
