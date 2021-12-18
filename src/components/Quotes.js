@@ -16,10 +16,14 @@ const Quotes = () => {
     <section className="quotes-container">
       {quotes.length ? (
         <>
-          {quotes.map((quote) => {
+          {quotes.map((quote, index) => {
             if (quote.APIName === "dailyQuote") {
               return (
-                <article className="quote" id="dailyQuote-container">
+                <article
+                  className="quote"
+                  id="dailyQuote-container"
+                  key={index}
+                >
                   <p>{quote.data.quoteText}</p>
                   <p>{quote.data.quoteAuthor}</p>
                 </article>
@@ -27,7 +31,11 @@ const Quotes = () => {
             }
             if (quote.APIName === "dailyStoicQuote") {
               return (
-                <article className="quote" id="dailyStoicQuote-container">
+                <article
+                  className="quote"
+                  id="dailyStoicQuote-container"
+                  key={index}
+                >
                   <p>{quote.data.body}</p>
                   <p>{quote.data.author}</p>
                 </article>

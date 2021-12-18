@@ -34,6 +34,16 @@ img:not(header > img) {
   object-fit: cover;
 }
 
+.waa-container {
+  outline: 1px solid red;
+  outline-offset: 5px;
+}
+
+.waa-component {
+  border: 1px dashed green;
+  margin: 4px;
+}
+
 header {
   background-color: #0e1d33;
   position: relative;

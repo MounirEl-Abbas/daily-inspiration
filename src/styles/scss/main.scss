@@ -31,4 +31,13 @@ img:not(header > img) {
   object-fit: cover;
 }
 
+.waa-container {
+  outline: 1px solid red;
+  outline-offset: 5px;
+}
+.waa-component {
+  border: 1px dashed green;
+  margin: 4px;
+}
+
 @import "./components/header", "./components/sectionOne";
