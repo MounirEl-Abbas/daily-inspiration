@@ -3,18 +3,20 @@ import { useGlobalContext } from "../context";
 
 const Affirmation = () => {
   const { getRelevantData, isLoading } = useGlobalContext();
+  const [affirmation, setAffirmation] = useState({});
 
   useEffect(() => {
     if (isLoading) return;
-    getRelevantData("dailyAffirmation");
+    const result = getRelevantData("dailyAffirmation");
+    setAffirmation({ ...result });
   }, [isLoading]);
 
   return (
     <section className="affirmation-container">
-      {isLoading ? (
-        <h2 className="loading">Loading Affirmation...</h2>
+      {!isLoading || Object.keys(affirmation).length ? (
+        <p>{affirmation.data}</p>
       ) : (
-        <h2>x</h2>
+        <h2 className="loading">Loading Affirmation...</h2>
       )}
     </section>
   );
