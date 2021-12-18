@@ -9,13 +9,9 @@ const Quotes = () => {
     if (isLoading) return;
     const quote = getRelevantData("dailyQuote");
     const stoicQuote = getRelevantData("dailyStoicQuote");
-    console.log(`quote`, quote);
-    console.log(`stoicQuote`, stoicQuote);
     setQuotes([quote, stoicQuote]);
   }, [isLoading]);
-  useEffect(() => {
-    console.log(`quotes`, quotes);
-  }, [quotes]);
+
   return (
     <section className="quotes-container">
       {quotes.length ? (
