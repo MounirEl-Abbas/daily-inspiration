@@ -18,8 +18,8 @@ const AppProvider = ({ children }) => {
     const pictureWidth = window.innerWidth;
     let arrayOfData = [];
     try {
-      const picture1 = await fetch(`https://picsum.photos/${pictureWidth}/400`);
-      const picture2 = await fetch(`https://picsum.photos/${pictureWidth}/900`);
+      // const picture1 = await fetch(`https://picsum.photos/${pictureWidth}/400`);
+      // const picture2 = await fetch(`https://picsum.photos/${pictureWidth}/900`);
       const response = await Promise.all([
         fetch(`https://quote-garden.herokuapp.com/api/v3/quotes/random`),
         fetch("https://stoicquotesapi.com/v1/api/quotes/random"),
@@ -35,7 +35,7 @@ const AppProvider = ({ children }) => {
         arrayOfData.push(responseData);
 
         if (arrayOfData.length !== response.length) return;
-        arrayOfData.push(picture1, picture2);
+        // arrayOfData.push(picture1, picture2);
         parseData(arrayOfData);
       });
     } catch (error) {
@@ -53,6 +53,7 @@ const AppProvider = ({ children }) => {
   }
 
   const parseData = (dataArray) => {
+    console.log(`dataArray`, dataArray);
     const DATA_Quote = dataArray[0].data[0];
     const DATA_StoicQuote = dataArray[1];
     const DATA_Advice = dataArray[2].slip;
@@ -61,8 +62,8 @@ const AppProvider = ({ children }) => {
     const DATA_RandDrink = dataArray[5].drinks[0];
     const DATA_Activity = dataArray[6];
     const DATA_Affirmation = getAffirmation();
-    const DATA_Picture1 = dataArray[7].url;
-    const DATA_Picture2 = dataArray[8].url;
+    // const DATA_Picture1 = dataArray[7].url;
+    // const DATA_Picture2 = dataArray[8].url;
 
     const newDataArray = [
       { APIName: "dailyQuote", data: DATA_Quote },
@@ -73,8 +74,8 @@ const AppProvider = ({ children }) => {
       { APIName: "dailyDrink", data: DATA_RandDrink },
       { APIName: "dailyActivity", data: DATA_Activity },
       { APIName: "dailyAffirmation", data: DATA_Affirmation },
-      { APIName: "dailyPicture1", data: DATA_Picture1 },
-      { APIName: "dailyPicture2", data: DATA_Picture2 },
+      // { APIName: "dailyPicture1", data: DATA_Picture1 },
+      // { APIName: "dailyPicture2", data: DATA_Picture2 },
     ];
     setData(newDataArray);
     setIsLoading(false);
@@ -83,34 +84,33 @@ const AppProvider = ({ children }) => {
   };
 
   const getRelevantData = (APIName) => {
-    switch (APIName) {
-      case "dailyAffirmation":
-        const result = data.find((APIData) => {
-          return APIData.APIName === APIName;
-        });
-        return result;
-      case "dailyQuote":
-        break;
-      case "dailyStoicQuote":
-        break;
-      case "dailyAdvice":
-        break;
-      case "dailyWord":
-        break;
-      case "dailyActivity":
-        break;
-      case "dailyMeal":
-        break;
-      case "dailyDrink":
-        break;
-      case "dailyPicture1":
-        break;
-      case "dailyPicture2":
-        break;
+    // switch (APIName) {
+    //   case "dailyAffirmation":
+    const result = data.find((APIData) => {
+      return APIData.APIName === APIName;
+    });
+    return result;
+    // case "dailyQuote":
 
-      default:
-        break;
-    }
+    // case "dailyStoicQuote":
+    //   break;
+    // case "dailyAdvice":
+    //   break;
+    // case "dailyWord":
+    //   break;
+    // case "dailyActivity":
+    //   break;
+    // case "dailyMeal":
+    //   break;
+    // case "dailyDrink":
+    //   break;
+    // case "dailyPicture1":
+    //   break;
+    // case "dailyPicture2":
+    //   break;
+
+    // default:
+    //   break;
   };
 
   return (
@@ -125,9 +125,7 @@ const AppProvider = ({ children }) => {
   );
 };
 
-export const useGlobalContext = () => {
-  return useContext(AppContext);
-};
+export const useGlobalContext = () => useContext(AppContext);
 
 export default AppProvider;
 
