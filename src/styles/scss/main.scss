@@ -61,13 +61,18 @@ a {
   margin: 2rem auto;
   text-align: center;
 }
-.meal-drink {
-  img {
-    width: 200px;
-    height: 200px;
-  }
+
+footer {
+  width: 100%;
+  text-align: center;
+  background-color: #0e1d33;
+  padding: 2rem 0;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
 }
 @import "./components/header", "./components/images";
 @import "./components/affirmation", "./components/quotes";
+@import "./components/waa", "./components/mealDrink";
 
-@import "mediaQueries"
+@import "mediaQueries";
