@@ -1,6 +1,7 @@
 import React from "react";
 
-const Meal = () => {
+const Meal = ({ data }) => {
+  console.log(`data meal`, data);
   return <div>Meal</div>;
 };
 
