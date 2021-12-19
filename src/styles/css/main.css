@@ -202,6 +202,57 @@ header img {
   }
 }
 
+.waa-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 95%;
+  margin: 5rem auto;
+  align-items: center;
+  row-gap: 4rem;
+}
+
+.waa-component {
+  border-radius: 20px;
+  width: 100%;
+  max-width: 30rem;
+  height: 20rem;
+  padding: 1rem;
+  box-shadow: 5px 5px 10px 1px rgba(255, 255, 255, 0.2);
+  margin: auto 2rem;
+}
+
+.waa-component span {
+  font-weight: 900;
+}
+
+.waa-component h3 {
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #151515;
+}
+
+.waa-component div {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  line-height: 1.5;
+  height: 80%;
+}
+
+.waa-component:first-of-type h3 {
+  border-bottom: 2px solid #dcd0c0;
+}
+
+.waa-component:nth-child(2) h3 {
+  border-bottom: 2px solid #da635d;
+}
+
+.waa-component:last-child h3 {
+  border-bottom: 2px solid #b1938b;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 12px;
