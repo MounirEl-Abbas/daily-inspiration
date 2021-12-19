@@ -4,13 +4,13 @@ const Word = ({ data }) => {
   const { word, pronunciation, definition } = data.data;
   return (
     <article className="waa-component">
+      <h3>Word of the Day</h3>
       <div>
-        <h3>Word of the Day</h3>
         <p>
           <span>{word}</span> "{pronunciation}"
         </p>
+        <p>{definition}</p>
       </div>
-      <p>{definition}</p>
     </article>
   );
 };

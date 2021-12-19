@@ -5,7 +5,9 @@ const Advice = ({ data }) => {
   return (
     <article className="waa-component">
       <h3>Advice</h3>
-      <p>{advice}</p>
+      <div>
+        <p>{advice}</p>
+      </div>
     </article>
   );
 };
