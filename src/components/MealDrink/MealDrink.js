@@ -16,10 +16,6 @@ const MealDrink = () => {
     setMealDrink([meal, drink]);
   }, [isLoading]);
 
-  useEffect(() => {
-    console.log(mealDrink);
-  }, [mealDrink]);
-
   return (
     <div>
       {mealDrink.length ? (
