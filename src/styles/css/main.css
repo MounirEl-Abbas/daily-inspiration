@@ -94,7 +94,7 @@ header img {
   margin: 0 auto;
   border-radius: 64% 36% 74% 26% / 0% 78% 22% 100%;
   z-index: 9;
-  mix-blend-mode: color;
+  mix-blend-mode: multiply;
 }
 
 .image-container {
