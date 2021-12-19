@@ -1,7 +1,7 @@
 import React from "react";
 
-const Advice = ({ dailyAdvice }) => {
-  const { advice } = dailyAdvice.data;
+const Advice = ({ data }) => {
+  const { advice } = data.data;
   return (
     <article className="waa-component">
       <h3>Advice</h3>

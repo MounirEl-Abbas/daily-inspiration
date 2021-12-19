@@ -1,8 +1,7 @@
 import React from "react";
 
-const Word = ({ dailyWord }) => {
-  const { word, pronunciation, definition } = dailyWord.data;
-  console.log(`dailyWord`, dailyWord);
+const Word = ({ data }) => {
+  const { word, pronunciation, definition } = data.data;
   return (
     <article className="waa-component">
       <div>

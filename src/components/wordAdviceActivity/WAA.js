@@ -23,11 +23,11 @@ const WAA = () => {
         <>
           {wordAdviceActivity.map((data, index) => {
             if (data.APIName === "dailyWord")
-              return <Word dailyWord={data} key={index} />;
+              return <Word data={data} key={index} />;
             if (data.APIName === "dailyAdvice")
-              return <Advice dailyAdvice={data} key={index} />;
+              return <Advice data={data} key={index} />;
             if (data.APIName === "dailyActivity")
-              return <Activity dailyActivity={data} key={index} />;
+              return <Activity data={data} key={index} />;
           })}
         </>
       ) : (
