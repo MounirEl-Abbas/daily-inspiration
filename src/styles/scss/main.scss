@@ -1,4 +1,4 @@
-@import "config";
+@import "./config";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -23,9 +23,30 @@ h3,
 h4,
 h5 {
   color: $text-color;
-  font-size: 20px;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.8rem;
+}
+h3,
+h4,
+h5 {
+  font-size: 1.6rem;
+}
+p,
+a,
+span {
+  font-size: 1.4rem;
 }
 
+blockquote {
+  font-size: 1.2rem;
+}
+cite {
+  font-size: 1rem;
+}
 a {
   color: $text-color;
   text-decoration: none;
@@ -34,4 +55,19 @@ a {
   }
 }
 
+.loading {
+  width: 80%;
+  max-width: 40rem;
+  margin: 2rem auto;
+  text-align: center;
+}
+.meal-drink {
+  img {
+    width: 200px;
+    height: 200px;
+  }
+}
 @import "./components/header", "./components/images";
+@import "./components/affirmation", "./components/quotes";
+
+@import "mediaQueries"

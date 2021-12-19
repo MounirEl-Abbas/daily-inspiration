@@ -1,0 +1,18 @@
+.affirmation-container {
+  width: 80%;
+  max-width: 40rem;
+  margin: 10rem auto;
+  fieldset {
+    border-radius: 5px;
+    padding: 1rem;
+    border-color: #dcd0c0;
+    text-align: center;
+    legend {
+      letter-spacing: 4px;
+      h2 {
+        color: #da635d;
+        padding: 0 0.5rem;
+      }
+    }
+  }
+}
