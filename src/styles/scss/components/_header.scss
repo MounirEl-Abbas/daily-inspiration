@@ -1,16 +1,35 @@
 header {
-  background-color: $nav-color;
-  position: relative;
   height: 120px;
+  background: -moz-linear-gradient(
+    top,
+    rgba(14, 29, 51, 0.65) 0%,
+    rgba(14, 29, 51, 0.31) 53%,
+    rgba(0, 0, 0, 0) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(14, 29, 51, 0.65) 0%,
+    rgba(14, 29, 51, 0.31) 53%,
+    rgba(0, 0, 0, 0) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 29, 51, 0.65) 0%,
+    rgba(14, 29, 51, 0.31) 53%,
+    rgba(0, 0, 0, 0) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
   img {
     position: absolute;
-    width: 250px;
-    top: 50px;
+    width: 90%;
+    max-width: 25rem;
+    top: 48px;
     left: 0;
     right: 0;
     margin: 0 auto;
-    border-radius: 0 50px 10px 40px;
-    mix-blend-mode: luminosity;
+    // border-radius: 0 50px 10px 40px;
+    border-radius: 64% 36% 74% 26% / 0% 78% 22% 100%;
+    z-index: 9;
+    mix-blend-mode: color;
   }
 }
