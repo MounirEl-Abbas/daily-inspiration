@@ -17,7 +17,7 @@ const MealDrink = () => {
   }, [isLoading]);
 
   return (
-    <div>
+    <section className="meal-drink">
       {mealDrink.length ? (
         <>
           {mealDrink.map((data, index) => {
@@ -31,7 +31,7 @@ const MealDrink = () => {
       ) : (
         <h2 className="loading">Loading Meal & Drink...</h2>
       )}
-    </div>
+    </section>
   );
 };
 

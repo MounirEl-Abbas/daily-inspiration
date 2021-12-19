@@ -1,7 +1,7 @@
 import React from "react";
 //Components
 import Header from "./components/Header";
-import Image from "./components/images/Image";
+import Image from "./components/Image";
 import Affirmation from "./components/Affirmation";
 import Quotes from "./components/Quotes";
 import WAA from "./components/wordAdviceActivity/WAA";

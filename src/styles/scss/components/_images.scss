@@ -1,0 +1,30 @@
+.image-container {
+  width: 100%;
+  height: 50rem;
+  figure {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &::after {
+      content: "";
+      background-color: rgba($color: #000000, $alpha: 0.4);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      outline: 1px dotted #aaa;
+      outline-offset: -2rem;
+      border: 1px solid #999;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.image-container:first-of-type {
+  height: 30rem;
+}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { useGlobalContext } from "../../context";
+import { useGlobalContext } from "../context";
 
 const Image = ({ imageNumber }) => {
   const { getRelevantData, isLoading } = useGlobalContext();
@@ -14,7 +14,7 @@ const Image = ({ imageNumber }) => {
   }, [isLoading]);
 
   return (
-    <section className="images-container">
+    <section className="image-container">
       {images.length ? (
         <figure>
           <img src={images[imageNumber].data} alt="" />
