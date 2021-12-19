@@ -14,7 +14,12 @@ const Affirmation = () => {
   return (
     <section className="affirmation-container">
       {!isLoading || Object.keys(affirmation).length ? (
-        <p>{affirmation.data}</p>
+        <fieldset>
+          <legend>
+            <h2>Affirmation</h2>
+          </legend>
+          <p>{affirmation.data}</p>
+        </fieldset>
       ) : (
         <h2 className="loading">Loading Affirmation...</h2>
       )}

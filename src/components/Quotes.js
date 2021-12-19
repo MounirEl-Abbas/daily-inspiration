@@ -24,8 +24,8 @@ const Quotes = () => {
                   id="dailyQuote-container"
                   key={index}
                 >
-                  <p>{quote.data.quoteText}</p>
-                  <p>{quote.data.quoteAuthor}</p>
+                  <blockquote>{quote.data.quoteText}</blockquote>
+                  <cite>-{quote.data.quoteAuthor}</cite>
                 </article>
               );
             }
@@ -36,8 +36,8 @@ const Quotes = () => {
                   id="dailyStoicQuote-container"
                   key={index}
                 >
-                  <p>{quote.data.body}</p>
-                  <p>{quote.data.author}</p>
+                  <blockquote>{quote.data.body}</blockquote>
+                  <cite>-{quote.data.author}</cite>
                 </article>
               );
             }
