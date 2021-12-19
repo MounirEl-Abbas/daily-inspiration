@@ -11,10 +11,10 @@ const App = () => {
   return (
     <div className="container">
       <Header />
-      <Image />
+      <Image imageNumber={0} />
       <Affirmation />
       <Quotes />
-      <Image />
+      <Image imageNumber={1} />
       <WAA />
       <MealDrink />
     </div>
