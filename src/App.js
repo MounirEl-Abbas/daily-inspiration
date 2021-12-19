@@ -17,6 +17,7 @@ const App = () => {
       <Image imageNumber={1} />
       <WAA />
       <MealDrink />
+      <footer>ME Time</footer>
     </div>
   );
 };

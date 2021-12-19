@@ -4,13 +4,16 @@ const Drink = ({ data }) => {
   const { strDrink, strCategory, strAlcoholic, strDrinkThumb } = data.data;
   return (
     <article>
-      <figure>
-        <img src={strDrinkThumb} alt="" />
-      </figure>
-      <h3>{strDrink}</h3>
-      <p>
-        <span>Category: {strCategory}</span>, <span>{strAlcoholic}</span>
-      </p>
+      <h3>Drink of the Day</h3>
+      <div>
+        <figure>
+          <img src={strDrinkThumb} alt="" />
+        </figure>
+        <h4>{strDrink}</h4>
+        <p>
+          {strCategory}, {strAlcoholic}
+        </p>
+      </div>
     </article>
   );
 };
